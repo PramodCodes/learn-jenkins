@@ -1,5 +1,5 @@
 // Jenkinsfile (Declarative Pipeline) 
-pipelne{
+pipeline{
     agent {
         // run on the AGENT-1 node
         node {
