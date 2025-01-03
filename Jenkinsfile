@@ -25,10 +25,10 @@ pipeline{
     options {
         // timeout for the pipeline, if the pipeline is running more than 1 hour it will be aborted
         timeout(time: 1, unit: 'HOURS')
-    }
-    options {
         disableConcurrentBuilds()
+
     }
+
     //build stages
     stages {
         stage('Build') {
