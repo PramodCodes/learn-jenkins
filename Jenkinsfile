@@ -1,4 +1,4 @@
-// Declerative pipeline
+// Jenkinsfile (Declarative Pipeline)
 pipelne{
     agent {
         // run on the AGENT-1 node
@@ -75,9 +75,9 @@ pipelne{
         }
     }
     // disable concurrent builds, if the pipeline is running on the node, then the next build will be in queue, no concurrent builds
-    // options {
-    //     disableConcurrentBuilds()
-    // }
+    options {
+        disableConcurrentBuilds()
+    }
     //triggers section, this section is used to define the triggers for the pipeline
     // triggers {
     //     cron('H/5 * * * *')
