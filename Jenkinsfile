@@ -1,4 +1,4 @@
-// declearing the pipeline
+// Declerative pipeline
 pipelne{
     agent {
         // run on the AGENT-1 node
