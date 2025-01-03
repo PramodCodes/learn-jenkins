@@ -1,4 +1,5 @@
-pipeline{
+// declearing the pipeline
+pipelne{
     agent {
         // run on the AGENT-1 node
         node {
