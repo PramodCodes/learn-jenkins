@@ -26,6 +26,9 @@ pipelne{
         // timeout for the pipeline, if the pipeline is running more than 1 hour it will be aborted
         timeout(time: 1, unit: 'HOURS')
     }
+    options {
+        disableConcurrentBuilds()
+    }
     //build stages
     stages {
         stage('Build') {
@@ -74,13 +77,4 @@ pipelne{
             echo 'This will run only if the pipeline is successful'
         }
     }
-    // disable concurrent builds, if the pipeline is running on the node, then the next build will be in queue, no concurrent builds
-    options {
-        disableConcurrentBuilds()
-    }
-    //triggers section, this section is used to define the triggers for the pipeline
-    // triggers {
-    //     cron('H/5 * * * *')
-    // }
-    // eof
 }
